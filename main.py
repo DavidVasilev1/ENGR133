@@ -1,37 +1,25 @@
+# import flask libraries
+from flask import Flask
 from flask_cors import CORS
-from saakd_api import app, db
+from flask_api import app, db
+# import the dijkstra api to run it when the program runs
+from flask_api.api.dijkstra_api import api_bp
 
-from saakd_api.api.todo import todo_bp
-from saakd_api.api.calculator import calculator_bp
-from saakd_api.api.timer import timer_bp
-from saakd_api.api.note import note_bp
-from saakd_api.api.schedule import schedule_bp
+# set the blueprint of the api endpoints
+app.register_blueprint(api_bp, url_prefix='/api')
 
-from saakd_api.model.calculators import init_calculators
-from saakd_api.model.notes import init_notes
-from saakd_api.model.timers import init_timers
-from saakd_api.model.todos import init_todos
-from saakd_api.model.schedules import init_schedules
-
-app.register_blueprint(todo_bp)
-app.register_blueprint(timer_bp)
-app.register_blueprint(note_bp)
-app.register_blueprint(calculator_bp)
-app.register_blueprint(schedule_bp)
-
-
-@app.before_first_request
-def init_db():
+# main function running the app
+def main():
+    # create the flask application
     with app.app_context():
+        # create all databases
         db.create_all()
-        init_notes()
-        init_todos()
-        init_calculators()
-        init_timers()
-        init_schedules()
-
-
-if __name__ == "__main__":
-    cors = CORS(app)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///./volumes/sqlite.db"
+    # open port 8199 and run the app
     app.run(debug=True, host="0.0.0.0", port="8199")
+
+# run the main function
+if __name__ == "__main__":
+    # start corse on the app
+    cors = CORS(app)
+    # run the main function
+    main()

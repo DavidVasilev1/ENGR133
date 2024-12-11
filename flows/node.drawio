@@ -1,0 +1,49 @@
+<mxfile host="65bd71144e">
+    <diagram id="p01LH7oJXtzLEmNJw-8F" name="Page-1">
+        <mxGraphModel dx="351" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Node&lt;br&gt;&lt;br&gt;- id: int&lt;br&gt;- distance: float&lt;br&gt;- adjacents: dict&lt;br&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;__init__&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;id&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;distance&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;float&lt;/span&gt;)&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;add_neighbor&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;neighbor&lt;/span&gt;: Node, &lt;span class=&quot;hljs-attr&quot;&gt;weight&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;)&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;get_neighbors&lt;/span&gt;(): dict_keys&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;get_weight&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;neighbor&lt;/span&gt;: Node): &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="260" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="def __init__(self, id, distance=float('inf'))" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="250" width="260" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="define self id, distance, and adjecents dictionary" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="def add_neighbors(self, neighbor, weight=0)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="420" width="260" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="define self adjecent neighbors as weights" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="10" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="def get_neighbors(self)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="590" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="return adjecent keys" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="13" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="def get_weight(self, neighbor)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="760" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="return adjecent neighbor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="830" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
